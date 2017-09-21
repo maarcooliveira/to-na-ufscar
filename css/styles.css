@@ -111,6 +111,7 @@ th {
 /* Materialize customizations */
 .progress {
 	background-color: #f8bbd0 !important;
+	margin: 0 0 0 0 !important;
 }
 .progress .determinate {
 	background-color: #d81b60 !important;

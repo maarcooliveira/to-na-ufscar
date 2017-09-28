@@ -1,4 +1,5 @@
 var cursos;
+var grupo;
 
 $(document).ready(function() {
   $('select').material_select();
@@ -85,6 +86,9 @@ $(document).ready(function() {
 
 });
 
+function setGroup(groupId) {
+  grupo = groupId;
+};
 
 function mostrarResultado() {
   var n_linguagens = $('#n_linguagens').val();
@@ -94,7 +98,7 @@ function mostrarResultado() {
   var n_redacao = $('#n_redacao').val();
   var campus = $('#campus').val();
   var curso = $('#cursos').val();
-  var grupo = $('#grupo').val();
+  // var grupo = $('#grupo').val();
   var gp = "g" + grupo;
   var id;
 

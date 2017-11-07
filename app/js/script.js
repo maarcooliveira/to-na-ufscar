@@ -36,9 +36,9 @@ $(document).ready(function() {
   });
 
   // $('#grades').css('display', 'none');
-  // $('#group').css('display', 'none');
-  // $('#course').css('display', 'none');
-  // $('#results').css('display', 'none');
+  $('#group').css('display', 'none');
+  $('#course').css('display', 'none');
+  $('#results').css('display', 'none');
 
   // Smooth scroll
   $(".inner-nav").click(function(event) {
@@ -79,6 +79,7 @@ $(document).ready(function() {
 function setGroup(groupId) {
   grupo = groupId;
   $('#btn-confirm-group').click();
+  ga('send', 'event', 'app', 'setGroup', grupo);
 };
 
 function showResults() {
@@ -100,6 +101,11 @@ function showResults() {
 
   var soma_pesos = Number(cursos[id].humanas) + Number(cursos[id].linguagens) + Number(cursos[id].matematica) + Number(cursos[id].natureza) + Number(cursos[id].redacao);
   var media_aluno = ((cursos[id].humanas * n_humanas) + (cursos[id].linguagens * n_linguagens) + (cursos[id].matematica * n_matematica) + (cursos[id].natureza * n_natureza) + (cursos[id].redacao * n_redacao))/soma_pesos;
+
+  ga('send', 'event', 'app', 'viewResults', curso, grupo, {
+    'dimension1': campus,
+    'metric1': media_aluno
+  });
 
   var cidade = "sao-carlos"
   if(campus === "Sorocaba") {

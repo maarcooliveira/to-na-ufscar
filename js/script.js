@@ -72,14 +72,6 @@ $(document).ready(function() {
 
   });
 
-  $('#btn-group-help').click(function(event) {
-    $('#groups').css('display', 'inline-block');
-  });
-
-  $('#grupo').on('change', function() {
-    $("#btn-confirm-group").removeClass("disabled");
-  });
-
   $('#cursos').on('change', function() {
     $("#btn-confirm-course").removeClass("disabled");
   });
@@ -88,9 +80,11 @@ $(document).ready(function() {
 
 function setGroup(groupId) {
   grupo = groupId;
+  $("#btn-confirm-group").removeClass("disabled");
+  $('#btn-confirm-group').click();
 };
 
-function mostrarResultado() {
+function showResults() {
   var n_linguagens = $('#n_linguagens').val();
   var n_humanas = $('#n_humanas').val();
   var n_natureza = $('#n_natureza').val();
@@ -98,7 +92,6 @@ function mostrarResultado() {
   var n_redacao = $('#n_redacao').val();
   var campus = $('#campus').val();
   var curso = $('#cursos').val();
-  // var grupo = $('#grupo').val();
   var gp = "g" + grupo;
   var id;
 

@@ -7,7 +7,7 @@ $(document).ready(function() {
 
   $.ajax({
     type: "GET",
-    url: "../data/dados-cursos.csv",
+    url: "./data/dados-cursos.csv",
     dataType: "text",
     success: function(data) {
       cursos = Papa.parse(data, {
@@ -35,10 +35,10 @@ $(document).ready(function() {
     $('select').material_select();
   });
 
-  $('#grades').css('display', 'none');
-  $('#group').css('display', 'none');
-  $('#course').css('display', 'none');
-  $('#results').css('display', 'none');
+  // $('#grades').css('display', 'none');
+  // $('#group').css('display', 'none');
+  // $('#course').css('display', 'none');
+  // $('#results').css('display', 'none');
 
   var sections = ["#intro", "#grades", "#group", "#course", "#results"];
 
@@ -80,7 +80,6 @@ $(document).ready(function() {
 
 function setGroup(groupId) {
   grupo = groupId;
-  $("#btn-confirm-group").removeClass("disabled");
   $('#btn-confirm-group').click();
 };
 
@@ -128,7 +127,7 @@ function showResults() {
   function get_dados(ano) {
     $.ajax({
       type: "GET",
-      url: "../data/" + ano + "-" + cidade + ".csv",
+      url: "./data/" + ano + "-" + cidade + ".csv",
       dataType: "text",
       success: function(data) {
         $('#results').css('display', 'inline-block');

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Tô na UFSCar?</title>
+  <link rel="icon" href="./img/student-icon.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#303f9f">
+</head>
+
+<body class="main-background">
+
+	<!-- Grades -->
+  <section id="grades" class="main-background">
+    <div class="progress" style="position: fixed; z-index: 999;">
+        <div class="determinate" style="width: 33%"></div>
+    </div>
+
+    <div class="full-width full-height center">
+      <div class="container">
+        <h2 class="center-align">Insira suas notas no ENEM 2017</h2><br>
+
+        <br><br>
+        <p class="center-align sub-header">Precisamos das notas individuais para que possamos calcular os diferentes pesos por prova que cada curso da UFSCar atribui. Não se preocupe, seus dados não serão armazenados.</p>
+        <br>
+        <h1 class="center-align"><img src="./img/board-icon.png" alt=""></h1>
+
+        <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <input id="n_linguagens" placeholder="Nota de linguagens" type="number" class="validate">
+              <label for="linguagens">Linguagens, códigos e suas tecnologias</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <input id="n_humanas" placeholder="Nota de humanas" type="number" class="validate">
+              <label for="humanas">Ciências humanas e suas tecnologias</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <input id="n_natureza" placeholder="Nota de natureza" type="number" class="validate">
+              <label for="natureza">Ciências da natureza e suas tecnologias</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <input id="n_matematica" placeholder="Nota de matemática" type="number" class="validate">
+              <label for="matematica">Matemática e suas tecnologias</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 m6 offset-m3">
+              <input id="n_redacao" placeholder="Nota da redação" type="number" class="validate">
+              <label for="redacao">Redação</label>
+            </div>
+          </div>
+        </form>
+        </div>
+
+        <div class="center-align">
+          <a href="#group" class="waves-effect waves-light btn main-button inner-nav"><i class="fa fa-chevron-right right"></i>Continuar</a>
+        </div>
+        <br>
+      </div>
+    </div>
+  </section>
+
+  <!-- Group -->
+  <section id="group" class="main-background">
+      <div class="progress" style="position: fixed; z-index: 999;">
+          <div class="determinate" style="width: 66%"></div>
+      </div>
+
+    <div class="full-width full-height center">
+      <div class="container">
+        <h2 class="center-align">Qual a sua modalidade de concorrência?</h2>
+        
+        <h1 class="center-align"><img src="./img/student-icon.png" alt=""></h1>
+
+        <br>
+        <div class="row">
+          <div class="col s12 l10 offset-l1">
+            <div class="card waves-effect waves-dark" onclick="setGroup(1)">
+              <div class="card-content black-text">
+                <span class="card-title">Grupo 1</span>
+                <p>Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 (um vírgula cinco) salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 l10 offset-l1">
+            <div class="card waves-effect waves-dark" onclick="setGroup(2)">
+              <div class="card-content black-text">
+                <span class="card-title">Grupo 2</span>
+                <p>Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 (um vírgula cinco) salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 l10 offset-l1">
+            <div class="card waves-effect waves-dark" onclick="setGroup(3)">
+              <div class="card-content black-text">
+                <span class="card-title">Grupo 3</span>
+                <p>Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita superior a 1,5 (um vírgula cinco) salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 l10 offset-l1">
+            <div class="card waves-effect waves-dark" onclick="setGroup(4)">
+              <div class="card-content black-text">
+                <span class="card-title">Grupo 4</span>
+                <p>Candidatos com renda familiar bruta per capita superior a 1,5 (um vírgula cinco) salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 l10 offset-l1">
+            <div class="card waves-effect waves-dark" onclick="setGroup(5)">
+              <div class="card-content black-text">
+                <span class="card-title">Grupo 5</span>
+                <p>Ampla Concorrência: Demais candidatos, ou seja, aqueles e aquelas que não se enquadrarem ou não optarem por concorrer às vagas destinadas aos Grupos 1 a 4.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br>
+
+        <div class="center-align">
+          <a id="btn-confirm-group" href="#course" class="inner-nav"></a>
+        </div>
+        <br>
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus and course -->
+  <section id="course" class="full-width main-background">
+      <div class="progress" style="position: fixed; z-index: 999;">
+          <div class="determinate" style="width: 100%"></div>
+      </div>
+
+    <div class="full-width full-height center">
+      <div class="container">
+        <h2 class="center-align">Escolha o campus e um dos cursos da UFSCar</h2><br>
+
+        <br><br>
+        <p class="center-align sub-header">Escolha um dos cursos para ver os resultados. Você pode consultar outros cursos depois.</p>
+        <br>
+
+        <h1 class="center-align"><img src="./img/university-icon.png" alt=""></h1>
+
+        <div class="row">
+          <div class="input-field col s12 m6 offset-m3">
+            <select id="campus">
+              <option value="" disabled selected>Escolha um campus</option>
+              <option value="São Carlos">São Carlos</option>
+              <option value="Sorocaba">Sorocaba</option>
+              <option value="Araras">Araras</option>
+              <option value="Lagoa do Sino">Lagoa do Sino</option>
+            </select>
+            <label>Campus</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 m6 offset-m3">
+            <select id="cursos" class="">
+              <option value="" disabled selected>Escolha um curso</option>
+            </select>
+            <label>Curso</label>
+          </div>
+        </div>
+
+        <br>
+        <div class="center-align">
+          <a id="btn-confirm-course" onclick="showResults()" class="waves-effect waves-light btn main-button disabled"><i class="fa fa-check right"></i>Ver resultados</a>
+        </div>
+        <br><br>
+      </div>
+  </div>
+
+  </section>
+
+
+  <section id="results" class="full-width full-height center main-background">
+    <div class="container">
+      <h3 class="center-align" id="nome_curso"></h3>
+      <h4 class="center-align" id="nome_campus"></h4><br>
+
+      <br>
+      <div class="row">
+        <table class="responsive-table col s12">
+          <thead>
+            <tr>
+                <th data-field="ano">Ano</th>
+                <th data-field="corte">Nota de Corte SISU</th>
+                <th data-field="max">Nota máxima</th>
+                <th data-field="min">Nota mínima</th>
+                <th data-field="res">Sua nota</th>
+                <th data-field="res">Desempenho</th>
+            </tr>
+          </thead>
+          <tbody id="tabela_res">
+          </tbody>
+        </table>
+      </div>
+
+      <br><br>
+      <div class="center-align">
+        <a href="#course" class="waves-effect waves-light btn main-button inner-nav"><i class="fa fa-chevron-left left"></i>Escolher outro curso</a>
+      </div>
+      <br>
+      <div class="center-align">
+        <a href="#group" class="waves-effect waves-light btn main-button inner-nav"><i class="fa fa-chevron-left left"></i>Escolher outro grupo</a>
+      </div>
+      <br>
+      <div class="center-align">
+        <a href="/app" class="waves-effect waves-light btn main-button"><i class="fa fa-repeat left"></i>Recomeçar simulação</a>
+      </div>
+      <br><br>
+
+      <!-- <p class="left-align">Esta página tem o objetivo de exibir (1) a nota de corte oficial do SISU, (2) a nota mais alta e (3) a nota mais baixa dos alunos que entraram em cada curso da UFSCar nos últimos 4 anos. Estes dados foram disponibilizados pela própria universidade e estão disponíveis <a href="http://www.prograd.ufscar.br/cursos/ingresso-na-graduacao/cursos-presenciais-sisu/comparativo-do-desempenho-dos-candidatos-nota-de-corte" target="_blank">neste link</a>. </p>
+      <br>
+      <p class="left-align">Os dados exibidos não são garantidos e o resultado da simulação não implica, em hipótese alguma, em garantia de vagas na universidade. As chamadas oficiais dos convocados para matrícula são divulgadas pelo SISU e pela UFSCar.</p> -->
+    </div>
+
+    <footer class="page-footer grey lighten-3 black-text">
+      <div class="container">
+          <p class="left-align">Esta página tem o objetivo de exibir (1) a nota de corte oficial do SISU, (2) a nota mais alta e (3) a nota mais baixa dos alunos que entraram em cada curso da UFSCar nos últimos 4 anos. Estes dados foram disponibilizados pela própria universidade e estão disponíveis <a href="http://www.prograd.ufscar.br/cursos/ingresso-na-graduacao/cursos-presenciais-sisu/comparativo-do-desempenho-dos-candidatos-nota-de-corte" target="_blank">neste link</a>. </p>
+          <br><p class="left-align">Os dados exibidos não são garantidos e o resultado da simulação não implica, em hipótese alguma, em garantia de vagas na universidade. As chamadas oficiais dos convocados para matrícula são divulgadas pelo SISU e pela UFSCar.</p>
+          <br>
+      </div>
+        
+      <div class="footer-copyright">
+        <div class="container grey-text text-darken-3">
+          Página por <a href="http://marcooliveira.me" class="" target="_blank">Marco Oliveira</a>
+          <a class="grey-text text-lighten-1 right" href="https://icons8.com/" target="_blank">Ícones por Icons8</a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <script src="./lib/jquery-2.1.3.min/index.js"></script>
+  <script src="./lib/materialize.js"></script>
+  <script src="./lib/papaparse.min.js"></script>
+  <script src="./js/script.js"></script>
+
+  <script>
+    // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // ga('create', 'UA-48088392-3', 'auto');
+    // ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

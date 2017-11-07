@@ -91,9 +91,9 @@ html {
 .sub-header {
     font-size: 1.2em
 }
-.input-field {
+/* .input-field {
     color: #fff
-}
+} */
 .good {
     color: #19D448
 }
@@ -108,11 +108,32 @@ th {
     text-align: right !important;
 }
 
+.main-background {
+    color: #404040;
+
+    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+    /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.main-button {
+    background-color: #446CB3 !important;
+}
+
+.icons {
+    margin: 200px;
+    /* width: 100px;
+    max-height: 100px; */
+}
+
 /* Materialize customizations */
 .progress {
-	background-color: #f8bbd0 !important;
+	background-color: #ECF0F1 !important;
 	margin: 0 0 0 0 !important;
 }
 .progress .determinate {
-	background-color: #d81b60 !important;
+    /* background-color: #d81b60 !important; */
+    background-color: #0061c4 !important;
 }

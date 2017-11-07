@@ -21,51 +21,53 @@
 
     <div class="full-width full-height center">
       <div class="container">
-        <h2 class="center-align">Insira suas notas no ENEM 2017</h2><br>
-
-        <br><br>
+        <h3 class="center-align">Insira suas notas no ENEM 2017</h3><br>
         <p class="center-align sub-header">Precisamos das notas individuais para que possamos calcular os diferentes pesos por prova que cada curso da UFSCar atribui. Não se preocupe, seus dados não serão armazenados.</p>
-        <br>
         <h1 class="center-align"><img src="./img/board-icon.png" alt=""></h1>
+		
+		<div class="row">
+        <form class="col s12 l6 offset-l3">
+			<div class="card"><br>
+				<div class="card-content">
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+						<input id="n_linguagens" placeholder="Nota de linguagens" type="number" class="validate">
+						<label for="linguagens">Linguagens, códigos e suas tecnologias</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+						<input id="n_humanas" placeholder="Nota de humanas" type="number" class="validate">
+						<label for="humanas">Ciências humanas e suas tecnologias</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+						<input id="n_natureza" placeholder="Nota de natureza" type="number" class="validate">
+						<label for="natureza">Ciências da natureza e suas tecnologias</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+						<input id="n_matematica" placeholder="Nota de matemática" type="number" class="validate">
+						<label for="matematica">Matemática e suas tecnologias</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s10 offset-s1">
+						<input id="n_redacao" placeholder="Nota da redação" type="number" class="validate">
+						<label for="redacao">Redação</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<a href="#group" class="waves-effect waves-light btn main-button inner-nav col s8 offset-s2">Continuar</a>
+				</div>
+				<br>
+			</div>
+		</form>
+	</div>
 
-        <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12 m6 offset-m3">
-              <input id="n_linguagens" placeholder="Nota de linguagens" type="number" class="validate">
-              <label for="linguagens">Linguagens, códigos e suas tecnologias</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6 offset-m3">
-              <input id="n_humanas" placeholder="Nota de humanas" type="number" class="validate">
-              <label for="humanas">Ciências humanas e suas tecnologias</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6 offset-m3">
-              <input id="n_natureza" placeholder="Nota de natureza" type="number" class="validate">
-              <label for="natureza">Ciências da natureza e suas tecnologias</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6 offset-m3">
-              <input id="n_matematica" placeholder="Nota de matemática" type="number" class="validate">
-              <label for="matematica">Matemática e suas tecnologias</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s12 m6 offset-m3">
-              <input id="n_redacao" placeholder="Nota da redação" type="number" class="validate">
-              <label for="redacao">Redação</label>
-            </div>
-          </div>
-        </form>
-        </div>
-
-        <div class="center-align">
-          <a href="#group" class="waves-effect waves-light btn main-button inner-nav"><i class="fa fa-chevron-right right"></i>Continuar</a>
-        </div>
         <br>
       </div>
     </div>
@@ -79,8 +81,7 @@
 
     <div class="full-width full-height center">
       <div class="container">
-        <h2 class="center-align">Qual a sua modalidade de concorrência?</h2>
-        
+        <h3 class="center-align">Qual a modalidade de concorrência?</h3>
         <h1 class="center-align"><img src="./img/student-icon.png" alt=""></h1>
 
         <br>
@@ -149,41 +150,44 @@
 
     <div class="full-width full-height center">
       <div class="container">
-        <h2 class="center-align">Escolha o campus e um dos cursos da UFSCar</h2><br>
-
-        <br><br>
-        <p class="center-align sub-header">Escolha um dos cursos para ver os resultados. Você pode consultar outros cursos depois.</p>
-        <br>
-
-        <h1 class="center-align"><img src="./img/university-icon.png" alt=""></h1>
+        <h3 class="center-align">Escolha o campus e um dos cursos da UFSCar</h3><br>
+        <p class="center-align sub-header">Você pode consultar outros cursos depois.</p>
+        <h1 class="center-align"><img src="./img/university.svg" alt="" class="icons"></h1>
 
         <div class="row">
-          <div class="input-field col s12 m6 offset-m3">
-            <select id="campus">
-              <option value="" disabled selected>Escolha um campus</option>
-              <option value="São Carlos">São Carlos</option>
-              <option value="Sorocaba">Sorocaba</option>
-              <option value="Araras">Araras</option>
-              <option value="Lagoa do Sino">Lagoa do Sino</option>
-            </select>
-            <label>Campus</label>
-          </div>
-        </div>
+			<div class="col s12 l8 offset-l2">
+				<div class="card"><br>
+					<div class="card-content">
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<select id="campus">
+									<option value="" disabled selected>Escolha um campus</option>
+									<option value="São Carlos">São Carlos</option>
+									<option value="Sorocaba">Sorocaba</option>
+									<option value="Araras">Araras</option>
+									<option value="Lagoa do Sino">Lagoa do Sino</option>
+								</select>
+								<label>Campus</label>
+							</div>
+						</div>
 
-        <div class="row">
-          <div class="input-field col s12 m6 offset-m3">
-            <select id="cursos" class="">
-              <option value="" disabled selected>Escolha um curso</option>
-            </select>
-            <label>Curso</label>
-          </div>
+						<div class="row">
+							<div class="input-field col s10 offset-s1">
+								<select id="cursos" class="">
+									<option value="" disabled selected>Escolha um curso</option>
+								</select>
+								<label>Curso</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<a id="btn-confirm-course" onclick="showResults()" class="waves-effect waves-light btn main-button disabled col s8 offset-s2">Ver resultados</a>
+					</div>
+					<br>
+				</div>
+		  	</div>
         </div>
-
         <br>
-        <div class="center-align">
-          <a id="btn-confirm-course" onclick="showResults()" class="waves-effect waves-light btn main-button disabled"><i class="fa fa-check right"></i>Ver resultados</a>
-        </div>
-        <br><br>
       </div>
   </div>
 

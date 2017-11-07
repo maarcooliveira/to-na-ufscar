@@ -1,9 +1,9 @@
+var sections = ["#grades", "#group", "#course", "#results"];
 var cursos;
 var grupo;
 
 $(document).ready(function() {
   $('select').material_select();
-  $('#groups').css('display', 'none');
 
   $.ajax({
     type: "GET",
@@ -21,8 +21,8 @@ $(document).ready(function() {
     $("#btn-confirm-course").addClass("disabled");
     var selecionado = $(this).val();
     $('#cursos')
-    .empty()
-    .append('<option value=\'\' disabled selected>Escolha um curso</option>');
+      .empty()
+      .append('<option value=\'\' disabled selected>Escolha um curso</option>');
 
     for (i in cursos) {
       if (cursos[i].campus === selecionado) {
@@ -39,8 +39,6 @@ $(document).ready(function() {
   // $('#group').css('display', 'none');
   // $('#course').css('display', 'none');
   // $('#results').css('display', 'none');
-
-  var sections = ["#intro", "#grades", "#group", "#course", "#results"];
 
   // Smooth scroll
   $(".inner-nav").click(function(event) {

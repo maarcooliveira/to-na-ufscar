@@ -127,6 +127,25 @@ th {
     height: 100px;
 }
 
+.share-icon {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 5%;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 0.5s;
+}
+.share-icon:hover {
+    -webkit-transform:scale(1.1);
+    /* Safari and Chrome */
+    -moz-transform:scale(1.1);
+    /* Firefox */
+    -ms-transform:scale(1.1);
+    /* IE 9 */
+    -o-transform:scale(1.1);
+    /* Opera */
+    transform:scale(1.1);
+}
+
 /* Materialize customizations */
 .progress {
 	background-color: #ECF0F1 !important;

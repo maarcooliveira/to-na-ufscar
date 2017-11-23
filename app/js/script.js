@@ -1,12 +1,13 @@
+var sections = ["#grades", "#group", "#course", "#results"];
 var cursos;
+var grupo;
 
 $(document).ready(function() {
   $('select').material_select();
-  $('#groups').css('display', 'none');
 
   $.ajax({
     type: "GET",
-    url: "../data/dados-cursos.csv",
+    url: "./data/dados-cursos.csv",
     dataType: "text",
     success: function(data) {
       cursos = Papa.parse(data, {
@@ -20,8 +21,8 @@ $(document).ready(function() {
     $("#btn-confirm-course").addClass("disabled");
     var selecionado = $(this).val();
     $('#cursos')
-    .empty()
-    .append('<option value=\'\' disabled selected>Escolha um curso</option>');
+      .empty()
+      .append('<option value=\'\' disabled selected>Escolha um curso</option>');
 
     for (i in cursos) {
       if (cursos[i].campus === selecionado) {
@@ -34,12 +35,10 @@ $(document).ready(function() {
     $('select').material_select();
   });
 
-  $('#grades').css('display', 'none');
+  // $('#grades').css('display', 'none');
   $('#group').css('display', 'none');
   $('#course').css('display', 'none');
   $('#results').css('display', 'none');
-
-  var sections = ["#intro", "#grades", "#group", "#course", "#results"];
 
   // Smooth scroll
   $(".inner-nav").click(function(event) {
@@ -71,22 +70,19 @@ $(document).ready(function() {
 
   });
 
-  $('#btn-group-help').click(function(event) {
-    $('#groups').css('display', 'inline-block');
-  });
-
-  $('#grupo').on('change', function() {
-    $("#btn-confirm-group").removeClass("disabled");
-  });
-
   $('#cursos').on('change', function() {
     $("#btn-confirm-course").removeClass("disabled");
   });
 
 });
 
+function setGroup(groupId) {
+  grupo = groupId;
+  $('#btn-confirm-group').click();
+  ga('send', 'event', 'app', 'setGroup', grupo);
+};
 
-function mostrarResultado() {
+function showResults() {
   var n_linguagens = $('#n_linguagens').val();
   var n_humanas = $('#n_humanas').val();
   var n_natureza = $('#n_natureza').val();
@@ -94,7 +90,6 @@ function mostrarResultado() {
   var n_redacao = $('#n_redacao').val();
   var campus = $('#campus').val();
   var curso = $('#cursos').val();
-  var grupo = $('#grupo').val();
   var gp = "g" + grupo;
   var id;
 
@@ -106,6 +101,11 @@ function mostrarResultado() {
 
   var soma_pesos = Number(cursos[id].humanas) + Number(cursos[id].linguagens) + Number(cursos[id].matematica) + Number(cursos[id].natureza) + Number(cursos[id].redacao);
   var media_aluno = ((cursos[id].humanas * n_humanas) + (cursos[id].linguagens * n_linguagens) + (cursos[id].matematica * n_matematica) + (cursos[id].natureza * n_natureza) + (cursos[id].redacao * n_redacao))/soma_pesos;
+
+  ga('send', 'event', 'app', 'viewResults', curso, grupo, {
+    'dimension1': campus,
+    'metric1': media_aluno
+  });
 
   var cidade = "sao-carlos"
   if(campus === "Sorocaba") {
@@ -131,7 +131,7 @@ function mostrarResultado() {
   function get_dados(ano) {
     $.ajax({
       type: "GET",
-      url: "../data/" + ano + "-" + cidade + ".csv",
+      url: "./data/" + ano + "-" + cidade + ".csv",
       dataType: "text",
       success: function(data) {
         $('#results').css('display', 'inline-block');

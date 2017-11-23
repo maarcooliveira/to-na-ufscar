@@ -3,246 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Tô na UFSCar?</title>
-  <link rel="icon" href="./img/student-icon.png">
+  <meta name="description" content="Confira a nota de corte do SISU e a nota do último aluno a entrar em cada um dos cursos da UFSCar nos últimos cinco anos." />
+
+  <link rel="icon" href="./img/board-icon.png">
   <link rel="stylesheet" href="./css/styles.css">
-  <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta name="theme-color" content="#303f9f">
+  <meta name="theme-color" content="#dde8fd">
+
+  <meta property="og:title" content="Tô na UFSCar?" />
+  <meta property="og:url" content="http://passei.xyz" />
+  <!-- <meta property="og:image" content="" /> -->
+  <meta property="og:description" content="Confira a nota de corte do SISU e a nota do último aluno a entrar em cada um dos cursos da UFSCar nos últimos cinco anos." />
+  <meta property="og:site_name" content="Tô na UFSCar?" />
+
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+      ga('create', 'UA-48088392-3', 'auto');
+      ga('send', 'pageview', '/home');
+  </script>
 </head>
-<body class="indigo darken-2">
-  <section id="intro" class="full-width full-height center indigo darken-2 white-text">
+
+<body class="main-background">
+  <section id="intro" class="full-width full-height center main-background">
     <div class="container">
 
       <h2 class="center-align">Tô na UFSCar?</h2>
       <br><br>
-      <p class="center-align sub-header">Confira a nota de corte do SISU e a nota do último aluno <br />a entrar em cada um dos cursos da UFSCar nos últimos quatro anos.</p>
-      <br><br><br>
-      <div class="row">
-        <h1 class="col s4"><img src="./img/board-icon.png" alt=""></h1>
-        <h1 class="col s4"><img src="./img/university-icon.png" alt=""></h1>
-        <h1 class="col s4"><img src="./img/student-icon.png" alt=""></h1>
-      </div>
-
-      <div class="center-align">
-        <a  href="#grades" class="waves-effect waves-light btn pink darken-1 inner-nav"><i class="fa fa-chevron-right right"></i>Começar</a>
-      </div>
-      <br>
-    </div>
-  </section>
-
-
-  <section id="grades" class="full-width full-height center indigo darken-2 white-text">
-    <div class="container">
-      <h2 class="center-align">Insira suas notas no ENEM 2015</h2><br>
-      <div class="progress">
-        <div class="determinate" style="width: 33%"></div>
-      </div>
-
+      <p class="center-align sub-header">Confira a nota de corte do SISU e a nota do último aluno <br class="hide-on-small-only" />a entrar em cada um dos cursos da UFSCar nos últimos cinco anos.</p>
       <br><br>
-      <p class="center-align sub-header">Precisamos das notas individuais para que possamos calcular os diferentes pesos por prova que cada curso da UFSCar atribui. Não se preocupe, seus dados não serão armazenados.</p>
-      <br>
-      <h1 class="center-align"><img src="./img/board-icon.png" alt=""></h1>
-
       <div class="row">
-       <form class="col s12">
-         <div class="row">
-           <div class="input-field col s12 m6 offset-m3">
-             <input id="n_linguagens" placeholder="Nota de linguagens" type="number" class="validate">
-             <label for="linguagens">Linguagens, códigos e suas tecnologias</label>
-           </div>
-         </div>
-         <div class="row">
-           <div class="input-field col s12 m6 offset-m3">
-             <input id="n_humanas" placeholder="Nota de humanas" type="number" class="validate">
-             <label for="humanas">Ciências humanas e suas tecnologias</label>
-           </div>
-         </div>
-         <div class="row">
-           <div class="input-field col s12 m6 offset-m3">
-             <input id="n_natureza" placeholder="Nota de natureza" type="number" class="validate">
-             <label for="natureza">Ciências da natureza e suas tecnologias</label>
-           </div>
-         </div>
-         <div class="row">
-           <div class="input-field col s12 m6 offset-m3">
-             <input id="n_matematica" placeholder="Nota de matemática" type="number" class="validate">
-             <label for="matematica">Matemática e suas tecnologias</label>
-           </div>
-         </div>
-         <div class="row">
-           <div class="input-field col s12 m6 offset-m3">
-             <input id="n_redacao" placeholder="Nota da redação" type="number" class="validate">
-             <label for="redacao">Redação</label>
-           </div>
-         </div>
-       </form>
+        <h1 class="col m2 offset-m2 s4"><img src="./img/books.svg" alt=""></h1>
+        <h1 class="col m2 offset-m1 s4"><img src="./img/university.svg" alt=""></h1>
+        <h1 class="col m2 offset-m1 s4"><img src="./img/graduation-cap.svg" alt=""></h1>
       </div>
-
-      <div class="center-align">
-        <a href="#group" class="waves-effect waves-light btn pink darken-1 inner-nav"><i class="fa fa-chevron-right right"></i>Continuar</a>
-      </div>
-      <br>
-    </div>
-  </section>
-
-
-  <section id="group" class="full-width full-height center indigo darken-2 white-text">
-    <div class="container">
-      <h2 class="center-align">Qual a sua modalidade de concorrência?</h2><br>
-      <div class="progress">
-        <div class="determinate" style="width: 66%"></div>
-      </div>
-
-      <br><br>
-      <p class="left-align sub-header">Grupo 1: Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 (um vírgula cinco) salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas.</p>
-      <br>
-      <p class="left-align sub-header">Grupo 2: Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 (um vírgula cinco) salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas.</p>
-      <br>
-      <p class="left-align sub-header">Grupo 3: Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita superior a 1,5 (um vírgula cinco) salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas.</p>
-      <br>
-      <p class="left-align sub-header">Grupo 4: Candidatos com renda familiar bruta per capita superior a 1,5 (um vírgula cinco) salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas.</p>
-      <br>
-      <p class="left-align sub-header">Grupo 5 – Ampla Concorrência: Demais candidatos, ou seja, aqueles e aquelas que não se enquadrarem ou não optarem por concorrer às vagas destinadas aos Grupos 1 a 4.</p>
-      <br>
-
-      <h1 class="center-align"><img src="./img/student-icon.png" alt=""></h1>
-
       <div class="row">
-        <div class="input-field col s12 m6 offset-m3">
-          <select id="grupo">
-            <option value="" disabled selected>Escolha um grupo</option>
-            <option value="1">Grupo 1</option>
-            <option value="2">Grupo 2</option>
-            <option value="3">Grupo 3</option>
-            <option value="4">Grupo 4</option>
-            <option value="5">Grupo 5</option>
-          </select>
-          <label>Seu grupo</label>
-        </div>
-      </div>
-      <br>
-      <div class="center-align">
-        <a id="btn-confirm-group" href="#course" class="waves-effect waves-light btn pink darken-1 inner-nav disabled"><i class="fa fa-chevron-right right"></i>Continuar</a>
-      </div>
-      <br>
-    </div>
-  </section>
-
-
-  <section id="course" class="full-width full-height center indigo darken-2 white-text">
-    <div class="container">
-      <!-- <h2 class="center-align">[Parte 1/3]</h2> -->
-      <h2 class="center-align">Escolha o campus e um dos cursos da UFSCar</h2><br>
-      <div class="progress">
-        <div class="determinate" style="width: 100%"></div>
-      </div>
-
-      <br><br>
-      <p class="center-align sub-header">Escolha um dos cursos para ver os resultados. Você pode consultar outros cursos depois.</p>
-      <br>
-
-
-      <h1 class="center-align"><img src="./img/university-icon.png" alt=""></h1>
-
-      <div class="row">
-        <div class="input-field col s12 m6 offset-m3">
-          <select id="campus">
-            <option value="" disabled selected>Escolha um campus</option>
-            <option value="São Carlos">São Carlos</option>
-            <option value="Sorocaba">Sorocaba</option>
-            <option value="Araras">Araras</option>
-            <option value="Lagoa do Sino">Lagoa do Sino</option>
-          </select>
-          <label>Campus</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12 m6 offset-m3">
-          <select id="cursos" class="">
-            <option value="" disabled selected>Escolha um curso</option>
-          </select>
-          <label>Curso</label>
-        </div>
-      </div>
-
-      <br>
-      <div class="center-align">
-        <a id="btn-confirm-course" onclick="mostrarResultado()" class="waves-effect waves-light btn pink darken-1 disabled"><i class="fa fa-check right"></i>Ver resultados</a>
+        <a href="app" class="waves-effect waves-light btn main-button col s10 offset-s1 m4 offset-m4" onclick="ga('send', 'event', 'home', 'launchApp')">Começar</a>
       </div>
       <br><br>
     </div>
-  </section>
-
-
-  <section id="results" class="full-width full-height center indigo darken-2 white-text">
-    <div class="container">
-      <h3 class="center-align" id="nome_curso"></h3>
-      <h4 class="center-align" id="nome_campus"></h4><br>
-
-      <!-- <h1 class="center-align"><img src="./img/result-icon.png" alt=""></h1> -->
-      <br>
-      <div class="row">
-        <table class="responsive-table col s12">
-          <thead>
-            <tr>
-                <th data-field="ano">Ano</th>
-                <th data-field="corte">Nota de Corte SISU</th>
-                <th data-field="max">Nota máxima</th>
-                <th data-field="min">Nota mínima</th>
-                <th data-field="res">Sua nota</th>
-                <th data-field="res">Desempenho</th>
-            </tr>
-          </thead>
-          <tbody id="tabela_res">
-          </tbody>
-        </table>
-      </div>
-
-      <br><br>
-      <div class="center-align">
-        <a href="#course" class="waves-effect waves-light btn pink darken-1 inner-nav"><i class="fa fa-chevron-left left"></i>Escolher outro curso</a>
-      </div>
-      <br>
-      <div class="center-align">
-        <a href="#group" class="waves-effect waves-light btn pink darken-1 inner-nav"><i class="fa fa-chevron-left left"></i>Escolher outro grupo</a>
-      </div>
-      <br>
-      <div class="center-align">
-        <a href="index.html" class="waves-effect waves-light btn pink darken-1"><i class="fa fa-repeat left"></i>Recomeçar simulação</a>
-      </div>
-      <br><br>
-
-      <p class="left-align">Esta página tem o objetivo de exibir (1) a nota de corte oficial do SISU, (2) a nota mais alta e (3) a nota mais baixa dos alunos que entraram em cada curso da UFSCar nos últimos 4 anos. Estes dados foram disponibilizados pela própria universidade e estão disponíveis <a href="http://www.prograd.ufscar.br/cursos/ingresso-na-graduacao/cursos-presenciais-sisu/comparativo-do-desempenho-dos-candidatos-nota-de-corte" target="_blank">neste link</a>. </p>
-      <br>
-      <p class="left-align">Os dados exibidos não são garantidos e o resultado da simulação não implica, em hipótese alguma, em garantia de vagas na universidade. As chamadas oficiais dos convocados para matrícula são divulgadas pelo SISU e pela UFSCar.</p>
+    <div class="row">
+      <a href="https://www.facebook.com/sharer.php?u=http://passei.xyz" target="_blank" onclick="ga('send', 'event', 'app', 'share', 'facebook')"><img src="../img/facebook.svg" class="share-icon" alt=""></a>
+      <a href="https://twitter.com/intent/tweet?text=T%C3%B4%20na%20UFSCar?&url=http://passei.xyz" target="_blank" onclick="ga('send', 'event', 'app', 'share', 'twitter')"><img src="../img/twitter.svg" class="share-icon" alt=""></a>
+      <a href="whatsapp://send?text=http://passei.xyz" data-action="share/whatsapp/share" onclick="ga('send', 'event', 'app', 'share', 'whatsapp')"><img src="../img/whatsapp.svg" class="share-icon" alt=""></a>
     </div>
-
-    <footer class="page-footer indigo darken-2">
-      <div class="footer-copyright">
-        <div class="container">
-        Página por <a href="http://marcooliveira.me" class="white-text" target="_blank">Marco Oliveira</a>
-        <a class="grey-text text-lighten-4 right" href="https://icons8.com/" target="_blank">Ícones por Icons8</a>
-        </div>
-      </div>
-    </footer>
   </section>
-
-  <script src="./lib/jquery-2.1.3.min/index.js"></script>
-  <script src="./lib/materialize.js"></script>
-  <script src="./lib/papaparse.min.js"></script>
-  <script src="./js/script.js"></script>
-
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-48088392-3', 'auto');
-    ga('send', 'pageview');
-  </script>
-
 </body>
 </html>

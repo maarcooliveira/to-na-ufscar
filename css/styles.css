@@ -1,1 +1,157 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}html{font-family:'Lato', sans-serif !important}.full-width{min-width:100%;margin-left:auto;margin-right:auto;max-width:initial}.full-height{min-height:calc(100vh - 0px);padding-top:40px}.center{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-justify-content:center;justify-content:center}.sub-header{font-size:1.2em}.input-field{color:#fff}.good{color:#19D448}.med{color:#fdd835}.bad{color:#d81b60}td,th{text-align:right !important;}
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,
+p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,
+dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
+var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,
+details,embed,figure,figcaption,footer,header,hgroup,menu,nav,
+output,ruby,section,summary,time,mark,audio,video {
+	margin:0;
+	padding:0;
+	border:0;
+	font:inherit;
+	font-size:100%;
+	vertical-align:baseline
+}
+
+html {
+    line-height: 1
+}
+ol,
+ul {
+    list-style: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+q,
+blockquote {
+    quotes: none
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none
+}
+a img {
+    border: none
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+html {
+    font-family: 'Lato', sans-serif !important
+}
+.full-width {
+    min-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: initial
+}
+.full-height {
+    min-height: calc(100vh - 0px);
+    padding-top: 40px
+}
+.center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center
+}
+.sub-header {
+    font-size: 1.2em
+}
+/* .input-field {
+    color: #fff
+} */
+.good {
+    color: #19D448
+}
+.med {
+    color: #fdd835
+}
+.bad {
+    color: #d81b60
+}
+td,
+th {
+    text-align: right !important;
+}
+
+.main-background {
+    color: #404040;
+
+    /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+    /* background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%); */
+
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+.main-button {
+    background-color: #446CB3 !important;
+}
+
+.icons {
+    width: 100px;
+    height: 100px;
+}
+
+.share-icon {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+    border-radius: 5%;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 0.5s;
+}
+.share-icon:hover {
+    -webkit-transform:scale(1.1);
+    /* Safari and Chrome */
+    -moz-transform:scale(1.1);
+    /* Firefox */
+    -ms-transform:scale(1.1);
+    /* IE 9 */
+    -o-transform:scale(1.1);
+    /* Opera */
+    transform:scale(1.1);
+}
+
+/* Materialize customizations */
+.progress {
+	background-color: #ECF0F1 !important;
+	margin: 0 0 0 0 !important;
+}
+.progress .determinate {
+    /* background-color: #d81b60 !important; */
+    background-color: #0061c4 !important;
+}

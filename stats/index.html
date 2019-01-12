@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Dados - Tô na UFSCar?</title>
+  <meta name="description" content="Confira a nota de corte do SISU e a nota do último aluno a entrar em cada um dos cursos da UFSCar nos últimos cinco anos." />
+
+  <link rel="icon" href="../img/board-icon.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#dde8fd">
+
+  <meta property="og:title" content="Dados - Tô na UFSCar?" />
+  <meta property="og:url" content="http://passei.xyz/stats" />
+  <!-- <meta property="og:image" content="" /> -->
+  <meta property="og:description" content="Confira a nota de corte do SISU e a nota do último aluno a entrar em cada um dos cursos da UFSCar nos últimos cinco anos." />
+  <meta property="og:site_name" content="Tô na UFSCar?" />
+
+  <script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+		ga('create', 'UA-48088392-3', 'auto');
+		ga('send', 'pageview', '/stats');
+  </script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-8301548091577041",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+
+<body class="main-background">
+
+	<!-- Stats -->
+  <section id="stats" class="main-background">
+
+    <div class="full-width center">
+      <div class="container">
+        <br>
+        <h3 class="center-align">Dados do Passei</h3><br>
+        <p class="center-align sub-header">Cursos mais vistos: os cursos mais utilizados nas simulações</p>
+        <br>
+        <div class="row">
+          <table class="responsive-table col s12">
+            <thead>
+              <tr>
+                  <th data-field="ano">#</th>
+                  <th data-field="corte">Curso</th>
+                  <th data-field="max">Campus</th>
+              </tr>
+            </thead>
+            <tbody id="tabela_res">
+                <tr><td>1.</td><td>MEDICINA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>2.</td><td>ENGENHARIA DE COMPUTAÇÃO - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>3.</td><td>ENGENHARIA DE PRODUÇÃO - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>4.</td><td>CIÊNCIA DA COMPUTAÇÃO - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>5.</td><td>ENGENHARIA MECÂNICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>6.</td><td>ENGENHARIA CIVIL - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>7.</td><td>CIÊNCIAS ECONÔMICAS - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>8.</td><td>PSICOLOGIA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>9.</td><td>ENGENHARIA ELÉTRICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>10.</td><td>ENGENHARIA DE MATERIAIS - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>11.</td><td>ADMINISTRAÇÃO - Bach - Noturno</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>12.</td><td>ENGENHARIA QUÍMICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>13.</td><td>ENGENHARIA DE PRODUÇÃO - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>14.</td><td>IMAGEM E SOM - Bach - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>15.</td><td>ABI - MATEMÁTICA - Área Básica de Ingresso (ABI) - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>16.</td><td>ENGENHARIA FÍSICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>17.</td><td>BIOTECNOLOGIA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>18.</td><td>FILOSOFIA - Lic OU Bach - Área Básica de Ingresso (ABI) - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>19.</td><td>FISIOTERAPIA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>20.</td><td>CIÊNCIAS SOCIAIS - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>21.</td><td>ESTATÍSTICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>22.</td><td>CIÊNCIA DA COMPUTAÇÃO - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>23.</td><td>ENFERMAGEM - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>24.</td><td>LETRAS - Lic - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>25.</td><td>PEDAGOGIA - Lic - Noturno</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>26.</td><td>CIÊNCIAS BIOLÓGICAS - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>27.</td><td>EDUCAÇÃO FÍSICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>28.</td><td>MATEMÁTICA - Lic ou Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>29.</td><td>EDUCAÇÃO ESPECIAL - Lic - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>30.</td><td>GERONTOLOGIA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>31.</td><td>QUÍMICA - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>32.</td><td>PEDAGOGIA - Lic - Matutino</td><td>São Carlos</td><td></td></tr>
+                <tr><td>33.</td><td>TERAPIA OCUPACIONAL - Bach - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>34.</td><td>FÍSICA - Lic ou Bach - Área Básica de Ingresso (ABI) - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>35.</td><td>CIÊNCIAS BIOLÓGICAS - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>36.</td><td>ENGENHARIA AGRONÔMICA - Bach - Integral</td><td>Araras</td><td></td></tr>
+                <tr><td>37.</td><td>QUÍMICA - Lic - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>38.</td><td>CIÊNCIAS BIOLÓGICAS - Lic - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>39.</td><td>MATEMÁTICA - Lic - Noturno</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>40.</td><td>QUÍMICA - Lic - Noturno</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>41.</td><td>BIBLIOTECONOMIA - Bach - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>42.</td><td>EDUCAÇÃO FÍSICA - Lic - Integral</td><td>São Carlos</td><td></td></tr>
+                <tr><td>43.</td><td>ENGENHARIA DE ALIMENTOS - Bach - Integral</td><td>Lagoa do Sino</td><td></td></tr>
+                <tr><td>44.</td><td>ENGENHARIA FLORESTAL - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>45.</td><td>FÍSICA - Lic - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>46.</td><td>TURISMO - Bach - Integral</td><td>Sorocaba</td><td></td></tr>
+                <tr><td>47.</td><td>ENGENHARIA AGRONÔMICA - Bach - Integral</td><td>Lagoa do Sino</td><td></td></tr>
+                <tr><td>48.</td><td>PEDAGOGIA - Lic - Noturno</td><td>São Carlos</td><td></td></tr>
+                <tr><td>49.</td><td>BIOTECNOLOGIA - Bach - Integral</td><td>Araras</td><td></td></tr>
+                <tr><td>50.</td><td>GEOGRAFIA - Lic - Noturno</td><td>Sorocaba</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <p class="center-align sub-header">Número de simulações por modalidade de concorrência</p>
+    <div id="groups-chart" ></div>
+  </section>
+
+  <section class="center">
+    <div class="container">
+	  
+	  <p>Compartilhe o Passei!</p>
+	  <a href="https://www.facebook.com/sharer.php?u=http://passei.xyz" target="_blank" onclick="ga('send', 'event', 'app', 'share', 'facebook')"><img src="../img/facebook.svg" class="share-icon" alt=""></a>
+	  <a href="https://twitter.com/intent/tweet?text=T%C3%B4%20na%20UFSCar?&url=http://passei.xyz" target="_blank" onclick="ga('send', 'event', 'app', 'share', 'twitter')"><img src="../img/twitter.svg" class="share-icon" alt=""></a>
+	  <a href="whatsapp://send?text=http://passei.xyz" data-action="share/whatsapp/share" onclick="ga('send', 'event', 'app', 'share', 'whatsapp')"><img src="../img/whatsapp.svg" class="share-icon" alt=""></a>
+	  
+    </div>
+  </section>
+
+  <footer class="page-footer grey lighten-3 black-text">
+    <div class="container">
+        <p class="left-align">Dados coletados no período de 7 de novembro a 2 de dezembro de 2017.</p>
+        <br>
+    </div>
+      
+    <div class="footer-copyright">
+      <div class="container grey-text text-darken-3">
+        Página por <a href="http://marcooliveira.me" class="" target="_blank">Marco Oliveira</a>
+        <a class="grey-text text-lighten-1 right" href="https://icons8.com/" target="_blank">Ícones por Icons8</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./lib/jquery-2.1.3.min/index.js"></script>
+  <script src="./lib/materialize.js"></script>
+  <script src="./js/script.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Grupo', 'Consultas'],
+        ['Grupo 5', 743],
+        ['Grupo 2', 378],
+        ['Grupo 1', 277],
+        ['Grupo 4', 238],
+        ['Grupo 3', 124]
+      ]);
+
+      var options = {
+        backgroundColor: { fill:'transparent' }
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('groups-chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+</body>
+</html>

@@ -124,7 +124,7 @@ function showResults() {
 
   $("#tabela_res").html("");
 
-  get_dados("2016");
+  get_dados("2017");
 
   $('#course').css('display', 'none');
 
@@ -160,12 +160,16 @@ function showResults() {
             $("#tabela_res").append(new_tr);
           }
         }
-        if (ano === "2016")
+        
+        if (ano === "2017") {
+          get_dados("2016")
+        } else if (ano === "2016") {
           get_dados("2015");
-        else if (ano === "2015")
+        } else if (ano === "2015") {
           get_dados("2014");
-        else if (ano === "2014")
+        } else if (ano === "2014") {
           get_dados("2013");
+        }
       }
     });
   }

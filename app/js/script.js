@@ -1,6 +1,8 @@
 var sections = ["#grades", "#group", "#course", "#results"];
-var cursos;
-var grupo;
+var firstYear = 2013;
+var lastYear = 2018;
+var courses;
+var group;
 
 $(document).ready(function () {
     $('select').material_select();
@@ -10,10 +12,10 @@ $(document).ready(function () {
         url: "./data/dados-cursos.csv",
         dataType: "text",
         success: function (data) {
-            cursos = Papa.parse(data, {
+            courses = Papa.parse(data, {
                 header: true
             });
-            cursos = cursos.data;
+            courses = courses.data;
         }
     });
 
@@ -24,11 +26,11 @@ $(document).ready(function () {
             .empty()
             .append('<option value=\'\' disabled selected>Escolha um curso</option>');
 
-        for (i in cursos) {
-            if (cursos[i].campus === selecionado) {
+        for (i in courses) {
+            if (courses[i].campus === selecionado) {
                 $('#cursos').append($('<option>', {
-                    value: cursos[i].curso,
-                    text: cursos[i].curso
+                    value: courses[i].curso,
+                    text: courses[i].curso
                 }));
             }
         }
@@ -52,8 +54,7 @@ $(document).ready(function () {
 
             if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
                 dest = $(document).height() - $(window).height();
-            }
-            else {
+            } else {
                 dest = $(this.hash).offset().top - 100;
             }
 
@@ -63,8 +64,7 @@ $(document).ready(function () {
                     });
                 }
             }
-            $('html,body').animate({ scrollTop: 0 }, 500, 'swing', function () {
-            });
+            $('html,body').animate({ scrollTop: 0 }, 500, 'swing', function () {});
             $(next).fadeIn("slow", function () { });
         }
 
@@ -77,65 +77,65 @@ $(document).ready(function () {
 });
 
 function setGroup(groupId) {
-    grupo = groupId;
+    group = groupId;
     $('#btn-confirm-group').click();
-    ga('send', 'event', 'app', 'setGroup', grupo);
+    ga('send', 'event', 'app', 'setGroup', group);
 };
 
 function showResults() {
-    var n_linguagens = $('#n_linguagens').val();
-    var n_humanas = $('#n_humanas').val();
-    var n_natureza = $('#n_natureza').val();
-    var n_matematica = $('#n_matematica').val();
-    var n_redacao = $('#n_redacao').val();
+    var languageGrade = $('#n_linguagens').val();
+    var humanGrade = $('#n_humanas').val();
+    var natureGrade = $('#n_natureza').val();
+    var mathGrade = $('#n_matematica').val();
+    var essayGrade = $('#n_redacao').val();
     var campus = $('#campus').val();
-    var curso = $('#cursos').val();
-    var gp = "g" + grupo;
+    var course = $('#cursos').val();
+    var gp = "g" + group;
     var id;
 
-    for (i in cursos) {
-        if (cursos[i].campus === campus && cursos[i].curso === curso) {
+    for (i in courses) {
+        if (courses[i].campus === campus && courses[i].curso === course) {
             id = i;
         }
     }
 
-    var soma_pesos = Number(cursos[id].humanas) + Number(cursos[id].linguagens) + Number(cursos[id].matematica) + Number(cursos[id].natureza) + Number(cursos[id].redacao);
-    var media_aluno = ((cursos[id].humanas * n_humanas) + (cursos[id].linguagens * n_linguagens) + (cursos[id].matematica * n_matematica) + (cursos[id].natureza * n_natureza) + (cursos[id].redacao * n_redacao)) / soma_pesos;
+    var weightSum = Number(courses[id].humanas) + Number(courses[id].linguagens) + Number(courses[id].matematica) + Number(courses[id].natureza) + Number(courses[id].redacao);
+    var studentGrade = ((courses[id].humanas * humanGrade) + (courses[id].linguagens * languageGrade) + (courses[id].matematica * mathGrade) + (courses[id].natureza * natureGrade) + (courses[id].redacao * essayGrade)) / weightSum;
 
-    ga('send', 'event', 'app', 'viewResults', curso, grupo, {
+    ga('send', 'event', 'app', 'viewResults', course, group, {
         'dimension1': campus,
-        'metric1': media_aluno
+        'metric1': studentGrade
     });
 
-    var cidade = "sao-carlos"
+    var city = "sao-carlos"
     if (campus === "Sorocaba") {
-        cidade = "sorocaba";
+        city = "sorocaba";
     }
     else if (campus === "Araras") {
-        cidade = "araras";
+        city = "araras";
     }
     else if (campus === "Lagoa do Sino") {
-        cidade = "lagoa-do-sino"
+        city = "lagoa-do-sino"
     }
 
-    var ac_corte = "<td><i class=\"fa fa-check fa-lg good\"></i> Acima da nota de corte</td>";
-    var ac_min = "<td><i class=\"fa fa-check fa-lg med\"></i> Acima da nota mínima</td>";
-    var ab_min = "<td><i class=\"fa fa-times fa-lg bad\"></i> Abaixo da nota mínima</td>";
+    var aboveCut = "<td><i class=\"fa fa-check fa-lg good\"></i> Acima da nota de corte</td>";
+    var aboveMin = "<td><i class=\"fa fa-check fa-lg med\"></i> Acima da nota mínima</td>";
+    var belowMin = "<td><i class=\"fa fa-times fa-lg bad\"></i> Abaixo da nota mínima</td>";
 
     $("#tabela_res").html("");
 
-    get_dados("2018");
+    getData(lastYear);
 
     $('#course').css('display', 'none');
 
-    function get_dados(ano) {
+    function getData(year) {
         $.ajax({
             type: "GET",
-            url: "./data/" + ano + "-" + cidade + ".csv",
+            url: "./data/" + year + "-" + city + ".csv",
             dataType: "text",
             success: function (data) {
                 $('#results').css('display', 'inline-block');
-                $('#nome_curso').text(curso);
+                $('#nome_curso').text(course);
                 $('#nome_campus').text('UFSCar ' + campus);
                 dados = Papa.parse(data, {
                     header: true
@@ -143,35 +143,27 @@ function showResults() {
                 d = dados.data;
 
                 for (i in d) {
-                    if (d[i].curso === curso) {
-                        new_tr = "<tr>"
-                        new_tr += "<td>" + ano + "</td>"
-                        new_tr += "<td>" + d[i][gp + '-sisu'] + "</td>"
-                        new_tr += "<td>" + d[i][gp + '-maior'] + "</td>"
-                        new_tr += "<td>" + d[i][gp + '-menor'] + "</td>"
-                        new_tr += "<td>" + media_aluno.toFixed(2) + "</td>"
-                        if (media_aluno >= d[i][gp + '-sisu'])
-                            new_tr += ac_corte;
-                        else if (media_aluno >= d[i][gp + '-menor'])
-                            new_tr += ac_min;
-                        else
-                            new_tr += ab_min;
-                        new_tr += "</tr>"
-                        $("#tabela_res").append(new_tr);
+                    if (d[i].curso === course) {
+                        row = "<tr>"
+                        row += "<td>" + year + "</td>"
+                        row += "<td>" + d[i][gp + '-sisu'] + "</td>"
+                        row += "<td>" + d[i][gp + '-maior'] + "</td>"
+                        row += "<td>" + d[i][gp + '-menor'] + "</td>"
+                        row += "<td>" + studentGrade.toFixed(2) + "</td>"
+                        if (studentGrade >= d[i][gp + '-sisu']) {
+                            row += aboveCut;
+                        } else if (studentGrade >= d[i][gp + '-menor']) {
+                            row += aboveMin;
+                        } else {
+                            row += belowMin;
+                        }
+                        row += "</tr>"
+                        $("#tabela_res").append(row);
                     }
                 }
-
-
-                if (ano === "2018") {
-                    get_dados("2017")
-                } else if (ano === "2017") {
-                    get_dados("2016");
-                } else if (ano === "2016") {
-                    get_dados("2015");
-                } else if (ano === "2015") {
-                    get_dados("2014");
-                } else if (ano === "2014") {
-                    get_dados("2013");
+                
+                if (year > firstYear) {
+                    getData(--year)
                 }
             }
         });

@@ -1,6 +1,6 @@
 var sections = ["#grades", "#group", "#course", "#results"];
 var firstYear = 2013;
-var lastYear = 2018;
+var lastYear = 2020;
 var courses;
 var group;
 
